@@ -1,0 +1,213 @@
+1)Write a JAVA code with the class named ‘acad’ and a method ‘main’. Hard code the program
+with two integers and print the sum of those two.
+
+
+import java.util.*;
+class acad
+{
+   public static void main(String[] args)
+
+   { 
+     int n1 = 10;
+     int n2 = 4;
+     System.out.println(n1+n2);
+   }
+}
+
+
+
+2)Rewrite the above code, where, inputs are provided by the user at runtime and the output is printed
+
+
+import java.util.*;
+class acad
+{
+   public static void main(String[] args)
+
+   {
+     Scanner sc=new Scanner(System.in);
+     int n1 = sc.nextInt();
+     int n2 = sc.nextInt();
+     System.out.println(n1 + n2);
+   }
+}
+
+
+
+
+3)Write a program with a method name sum() that accepts two parameters from the user and
+print the sum two numbers. Output of the format should be as :
+ 
+
+import java.util.*;
+class acad
+{
+   public static void sum()
+   {
+       Scanner sc=new Scanner(System.in);
+       int n1 = sc.nextInt();
+       int n2 = sc.nextInt();
+       System.out.println("First number is:"+n1);
+       System.out.println("Second number is:"+n2);
+       int sum=n1 + n2;
+       System.out.println("Sum is:"+sum);
+ 
+    }
+    public static void main(String[] args)
+    {
+        sum();
+    }
+}
+
+
+
+4)Write a program to accepts two numbers from stdin and find all the odd as well as even
+numbers present in between them.
+
+
+import java.util.*;
+class acad
+{
+    public static void main(String[] args)
+    {
+        int[] a1=new int[100];
+        int[] a2=new int[100];
+        int a=0,b=0;
+        Scanner sc=new Scanner(System.in);
+        int i = sc.nextInt();
+        int k = sc.nextInt();
+        for(int j=i;j<=k;j++)
+        {
+           if(j%2==0)
+           {
+              a2[a]=j;
+              a++;
+           }
+           else
+           {
+              a1[b]=j;
+              b++;
+           }
+        }
+        System.out.println("Odd numbers:");
+        for(int l=0;l<a1.length;l++)
+        {
+           if(a1[l]!=0)
+              System.out.println(a1[l]);
+        }
+
+        System.out.println("Even numbers:");
+        for(int l=0;l<a2.length;l++)
+        {
+           if(a2[l]!=0)
+              System.out.println(a2[l]);
+        }
+   }
+}
+
+
+
+5)Joe is scared to go to school. When her dad asked the reason, Joe said she is unable to complete
+the task given by her teacher. The task was to find the “first 10 multiples” of the number entered
+from stdin. 
+
+
+import java.util.*;
+class acad
+{
+  public static void main(String[] args)
+  {
+     Scanner sc=new Scanner(System.in);
+     int n1=sc.nextInt();
+     for(int i=1;i<=10;i++)
+     {
+        System.out.println(n1+" x "+i+" = "+(n1*i));
+     }
+  }
+}
+
+
+
+6)Write a program consisting method sum() and demonstrate the concept of method
+overloading using this method.
+ 
+
+import java.util.*;
+class Add
+{  
+  static int sum(int n1,int n2)
+  { 
+    return n1+n2;
+  }  
+  static int sum(int n1,int n2,int n3)
+  {
+    return n1+n2+n3;
+  }  
+} 
+ 
+class Overloading
+{  
+  public static void main(String[] args)
+  {  
+    System.out.println(Add.sum(5,8));  
+    System.out.println(Add.sum(13,9,23));  
+  }
+} 
+
+
+7) Can you overload a method with the same return type? Explain your answer with proper logic.
+
+
+import java.util.*;
+class Add
+{  
+  static int sum(int n1,int n2)
+  { 
+    return n1+n2;
+  }  
+  static int sum(int n1,int n2,int n3)
+  {
+    return n1+n2+n3;
+  }  
+} 
+ 
+class Overloading
+{  
+  public static void main(String[] args)
+  {  
+    System.out.println(Add.sum(5,8));  
+    System.out.println(Add.sum(13,9,23));  
+  }
+} 
+ 
+*In the above program,the method name is same and it has different parameters.
+*In both cases the return type is integer.
+*During compilation the compiler will only consider the number of parameters passed inside the methods 
+     and it does not consider the return type.
+*Thus a method can be overloaded with same return type.
+
+
+8) Write a program in java using Arrays that sorts the element in descending order.
+ 
+
+import java.util.*;
+class acad
+{
+   public static void main(String[] args)
+   {
+     Scanner sc=new Scanner(System.in);
+     int num=sc.nextInt();
+     int a[]=new int[100];
+     for(int i=0;i<num;i++)
+     {
+       a[i]=sc.nextInt();
+     }
+     Arrays.sort(a);
+     System.out.println("Descending order:");
+     for(int j=a.length-1;j>=0;j-- )
+     {
+       if(a[j]!=0)
+          System.out.println(a[j]);
+     }
+  }
+}
